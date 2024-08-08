@@ -1,6 +1,326 @@
 @import "./common/_common";
 @import "./common/_layout";
 
-// #wrap {
+header {
+    width: 100%;
+    height: 142px;
+    background: url(../../assets/images/header_bg.png) no-repeat center/cover;
+}
 
-// }
+#wrapper {
+    position: relative;
+    width: 100%;
+    background: #F2F2F2;
+    .wrap {
+        @include flexbox(row, center, stretch);
+        gap: 10px;
+        padding: 0 50px;
+        .lnb-wrap {
+            width: 352px;
+            > p {
+                font-size: 20px;
+                font-weight: 700;
+                color: #4D4D4D;
+                padding: 40px 0 14px;
+                height: 78px;
+                span {
+                    color: #005199;
+                }
+            }
+            .lnb {
+                border-radius: 14px;
+                background: $white;
+                height: calc(100% - 74px);
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                .menu-wrap {
+                    margin-bottom: 69px;
+                    .menu {
+                        position: relative;
+                        padding-top: 30px;
+                        .depth01 {
+                            position: relative;
+                            width: 100%;
+                            border-bottom: 1px solid #D1D1D1;
+                            > ul {
+                                display: none;
+                            }
+                            > ul:last-child {
+                                padding-bottom: 20px;
+                            }
+                            > a {
+                                position: relative;
+                                color:  #333333;
+                                font-size: 24px;
+                                font-weight: 700;
+                                width: 100%;
+                                height: 69px;
+                                padding: 20px 0 20px 30px;
+                                transition: all .25s;
+                                z-index: 10;
+                                &.home {
+                                    &::before {
+                                        position: absolute;
+                                        top: 0;
+                                        left: 0;
+                                        content: '';
+                                        width: 6px;
+                                        height: 100%;
+                                        background: #005199;
+                                        opacity: 0;
+                                        transition: all .25s;
+                                    }
+                                    &.active {
+                                        color: #003560;
+                                        background: #F1F7FF;
+                                        transition: all .25s;
+                                        &::before {
+                                            opacity: 1;
+                                            transition: all .25s;
+                                        }
+                                    }
+                                }
+                            }
+                            ul {
+                                .depth02 {
+                                    position: relative;
+                                    width: 100%;
+                                    &.add {
+                                        > a {
+                                            &::after {
+                                                position: absolute;
+                                                right: 30px;
+                                                content: '';
+                                                width: 20px;
+                                                height: 20px;
+                                                background: url(../../assets/images/icon_lnb_arrow.png);
+                                                transform: rotate(180deg);
+                                                transition: all .25s;
+                                            }
+                                            &.on {
+                                                &::after {
+                                                    transform: rotate(360deg);
+                                                    transition: all .25s;
+                                                }
+                                            }
+                                        }
+                                    }
+                                    > ul {
+                                        display: none;
+                                    }
+                                    > a {
+                                        position: relative;
+                                        color: #676767;
+                                        font-size: 18px;
+                                        font-weight: 500;
+                                        width: 100%;
+                                        height: 42px;
+                                        padding: 10px 0 10px 40px;
+                                        transition: all .25s;
+                                        &::before {
+                                            position: absolute;
+                                            top: 0;
+                                            left: 0;
+                                            content: '';
+                                            width: 6px;
+                                            height: 100%;
+                                            background: #005199;
+                                            opacity: 0;
+                                            transition: all .25s;
+                                        }
+                                        &.active {
+                                            color: #003560;
+                                            font-weight: 700;
+                                            background: #F1F7FF;
+                                            transition: all .25s;
+                                            &::before {
+                                                opacity: 1;
+                                                transition: all .25s;
+                                            }
+                                        }
+                                    }
+                                    ul {
+                                        .depth03 {
+                                            position: relative;
+                                            width: 100%;
+                                            > a {
+                                                position: relative;
+                                                color: #676767;
+                                                font-size: 18px;
+                                                font-weight: 400;
+                                                width: 100%;
+                                                height: 42px;
+                                                padding: 10px 0 10px 80px;
+                                                transition: all .25s;
+                                                &::before {
+                                                    position: absolute;
+                                                    top: 0;
+                                                    left: 0;
+                                                    content: '';
+                                                    width: 6px;
+                                                    height: 100%;
+                                                    background: #005199;
+                                                    opacity: 0;
+                                                    transition: all .25s;
+                                                }
+                                                &.active {
+                                                    color: #003560;
+                                                    font-weight: 700;
+                                                    background: #F1F7FF;
+                                                    transition: all .25s;
+                                                    &::before {
+                                                        opacity: 1;
+                                                        transition: all .25s;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .contact {
+                    padding: 30px;
+                    @include flexbox(column, center, flex-start);
+                    gap: 24px;
+                    li {
+                        @include flexbox(column, flex-start, flex-start);
+                        gap: 3px;
+                        span {
+                            position: relative;
+                            font-size: 22px;
+                            font-weight: 600;
+                            color: #333333;
+                            @include flexbox(row, center, center);
+                            &::after {
+                                position: relative;
+                                display: inline-block;
+                                content: '';
+                                width: 26px;
+                                height: 26px;
+                                background: url(../../assets/images/icon_phone.png) no-repeat center/contain;
+                            }
+                        }
+                        a {
+                            font-size: 18px;
+                            font-weight: 500;
+                            color: #676767;
+                        }
+                    }
+                }
+            }
+        }
+        .content-wrap {
+            width: calc(100% - 352px);
+            height: 100%;
+            border-radius: 14px;
+            background: #F2F2F2;
+            .breadcrumb {
+                height: 78px;
+                padding: 40px 0 14px;
+                ul {
+                    @include flexbox(row, flex-start, center);
+                    li {
+                        position: relative;
+                        @include flexbox(row, center, center);
+                        a {
+                            position: relative;
+                            font-size: 20px;
+                            color: #4D4D4D;
+                            font-weight: 500;
+                            &.home {
+                                width: 22px;
+                                height: 22px;
+                                background: url(../../assets/images/icon_home.png) no-repeat center/contain;
+                            }
+                        }
+                        &:not(:last-child) {
+                            &::after {
+                                position: relative;
+                                display: inline-block;
+                                content: '';
+                                width: 25px;
+                                height: 22px;
+                                background: url(../../assets/images/icon_arrow.png) no-repeat center/contain;
+                            }
+                        }
+                        &:last-child {
+                            a {
+                                color: #005199;
+                                font-weight: 700;
+                            }
+                        }
+                    }
+                }
+            }
+            .content {
+                width: 100%;
+                @include flexbox(row, center, center);
+                gap: 10px;
+                .left {
+                    width: 65%;
+                    @include flexbox(column, flex-start, center);
+                    gap: 10px;
+                    > div {
+                        width: 100%;
+                        border-radius: 14px;
+                        &.type01 {
+                            height: 588px;
+                            background: url(../../assets/images/con01.png) no-repeat center $white;
+                        }
+                        &.type02 {
+                            height: 768px;
+                            background: url(../../assets/images/con02.png) no-repeat center $white;
+                        }
+                        &.type03 {
+                            height: 243px;
+                            background: url(../../assets/images/con03.png) no-repeat center $white;
+                        }
+                    }
+                }
+                .right {
+                    width: 35%;
+                    @include flexbox(column, flex-start, center);
+                    gap: 10px;
+                    > div {
+                        width: 100%;
+                        border-radius: 14px;
+                        &.type01 {
+                            height: 220px;
+                            background: url(../../assets/images/con04.png) no-repeat center $white;
+                        }
+                        &.type02 {
+                            height: 1389px;
+                            background: url(../../assets/images/con05.png) no-repeat center $white;
+                        }
+                    }
+                }
+                .middle {
+                    width: 100%;
+                    @include flexbox(column, flex-start, center);
+                    .type01 {
+                        width: 100%;
+                        border-radius: 14px;
+                        height: 487px;
+                        background: url(../../assets/images/sub_con01.png);
+                    }
+                }
+            }
+        }
+    }
+}
+
+footer {
+    width: 100%;
+    height: 100px;
+    background: #F2F2F2;
+    .inner {
+        width: 100%;
+        height: 100%;
+        padding: 0 50px 50px 50px; 
+        @include flexbox(row, space-between, flex-end);
+    }
+}
