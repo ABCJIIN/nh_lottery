@@ -1,0 +1,27 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-size: 1.6rem;
+  line-height: 1;
+}
+body * {
+  font-weight: 400;
+  color: #000000;
+}
+
+.hide {
+  position: absolute;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  border: 0;
+  clip-path: polygon(0 0, 0 0, 0 0);
+}
