@@ -1,5 +1,4 @@
 @import "./common/_common";
-@import "./common/_layout";
 
 header {
     width: 100%;
@@ -18,13 +17,16 @@ header {
         .lnb-wrap {
             width: 352px;
             > p {
+                font-family: $pretendard;
                 font-size: 20px;
                 font-weight: 700;
                 color: #4D4D4D;
+                letter-spacing: -0.02em;
                 padding: 40px 0 14px;
                 height: 78px;
                 span {
                     color: #005199;
+                    font-weight: 700;
                 }
             }
             .lnb {
@@ -50,8 +52,10 @@ header {
                                 padding-bottom: 20px;
                             }
                             > a {
+                                font-family: $pretendard;
                                 position: relative;
                                 color:  #333333;
+                                letter-spacing: -0.03em;
                                 font-size: 24px;
                                 font-weight: 700;
                                 width: 100%;
@@ -112,6 +116,7 @@ header {
                                         display: none;
                                     }
                                     > a {
+                                        font-family: $pretendard;
                                         position: relative;
                                         color: #676767;
                                         font-size: 18px;
@@ -147,6 +152,7 @@ header {
                                             position: relative;
                                             width: 100%;
                                             > a {
+                                                font-family: $pretendard;
                                                 position: relative;
                                                 color: #676767;
                                                 font-size: 18px;
@@ -192,6 +198,8 @@ header {
                         @include flexbox(column, flex-start, flex-start);
                         gap: 3px;
                         span {
+                            font-family: $pretendard;
+                            letter-spacing: -0.02em;
                             position: relative;
                             font-size: 22px;
                             font-weight: 600;
@@ -207,8 +215,8 @@ header {
                             }
                         }
                         a {
-                            font-size: 18px;
-                            font-weight: 500;
+                            font-family: $pretendard;
+                            font-size: 16px;
                             color: #676767;
                         }
                     }
@@ -232,10 +240,12 @@ header {
                             position: relative;
                             @include flexbox(row, center, center);
                             a {
+                                font-family: $pretendard;
                                 position: relative;
                                 font-size: 20px;
                                 color: #4D4D4D;
                                 font-weight: 500;
+                                letter-spacing: -0.02em;
                                 &.home {
                                     width: 22px;
                                     height: 22px;
@@ -263,8 +273,10 @@ header {
                     }
                 }
                 .screen-num {
+                    font-family: $pretendard;
                     padding-bottom: 16px;
                     font-size: 20px;
+                    color: $black;
                 }
             }
             .content {
@@ -333,5 +345,26 @@ footer {
         height: 100%;
         padding: 0 50px 50px 50px; 
         @include flexbox(row, space-between, flex-end);
+        .txt {
+            font-family: $pretendard;
+            font-size: 14px;
+            color: #6A6E71;
+            letter-spacing: -0.02em;
+            span {
+                position: relative;
+                &:first-child {
+                    padding-right: 7px;
+                    &::after {
+                        position: relative;
+                        content: '';
+                        display: inline-block;
+                        width: 1px;
+                        height: 10px;
+                        background: #6A6E71;
+                        margin-left: 10px;
+                    }
+                }
+            }
+        }
     }
 }

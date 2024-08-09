@@ -1,6 +1,7 @@
 $black: #000000;
 $white: #ffffff;
 $gray01: #676767;
+$pretendard : 'Pretendard';
 
 @mixin flexbox($direction, $justfy, $align){
 	display:flex;
@@ -17,7 +18,7 @@ body{
     line-height: 1;
     *{
         font-weight: 400;
-        color: $black;
+        // color: $black;
     }
 }
 
