@@ -220,43 +220,51 @@ header {
             height: 100%;
             border-radius: 14px;
             background: #F2F2F2;
-            .breadcrumb {
-                height: 78px;
-                padding: 40px 0 14px;
-                ul {
-                    @include flexbox(row, flex-start, center);
-                    li {
-                        position: relative;
-                        @include flexbox(row, center, center);
-                        a {
+            .page-info {
+                width: 100%;
+                @include flexbox(row, space-between, flex-end);
+                .breadcrumb {
+                    height: 78px;
+                    padding: 40px 0 14px;
+                    ul {
+                        @include flexbox(row, flex-start, center);
+                        li {
                             position: relative;
-                            font-size: 20px;
-                            color: #4D4D4D;
-                            font-weight: 500;
-                            &.home {
-                                width: 22px;
-                                height: 22px;
-                                text-indent: -9999px;
-                                background: url(../../assets/images/icon_home.png) no-repeat center/contain;
-                            }
-                        }
-                        &:not(:last-child) {
-                            &::after {
-                                position: relative;
-                                display: inline-block;
-                                content: '';
-                                width: 25px;
-                                height: 22px;
-                                background: url(../../assets/images/icon_arrow.png) no-repeat center/contain;
-                            }
-                        }
-                        &:last-child {
+                            @include flexbox(row, center, center);
                             a {
-                                color: #005199;
-                                font-weight: 700;
+                                position: relative;
+                                font-size: 20px;
+                                color: #4D4D4D;
+                                font-weight: 500;
+                                &.home {
+                                    width: 22px;
+                                    height: 22px;
+                                    text-indent: -9999px;
+                                    background: url(../../assets/images/icon_home.png) no-repeat center/contain;
+                                }
+                            }
+                            &:not(:last-child) {
+                                &::after {
+                                    position: relative;
+                                    display: inline-block;
+                                    content: '';
+                                    width: 25px;
+                                    height: 22px;
+                                    background: url(../../assets/images/icon_arrow.png) no-repeat center/contain;
+                                }
+                            }
+                            &:last-child {
+                                a {
+                                    color: #005199;
+                                    font-weight: 700;
+                                }
                             }
                         }
                     }
+                }
+                .screen-num {
+                    padding-bottom: 16px;
+                    font-size: 20px;
                 }
             }
             .content {
