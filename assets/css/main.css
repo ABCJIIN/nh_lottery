@@ -23,8 +23,7 @@ body * {
   margin: -1px;
   overflow: hidden;
   border: 0;
-  -webkit-clip-path: polygon(0 0, 0 0, 0 0);
-          clip-path: polygon(0 0, 0 0, 0 0);
+  clip-path: polygon(0 0, 0 0, 0 0);
 }
 
 header {
@@ -247,36 +246,43 @@ header {
   border-radius: 14px;
   background: #F2F2F2;
 }
-#wrapper .wrap .content-wrap .breadcrumb {
+#wrapper .wrap .content-wrap .page-info {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+#wrapper .wrap .content-wrap .page-info .breadcrumb {
   height: 78px;
   padding: 40px 0 14px;
 }
-#wrapper .wrap .content-wrap .breadcrumb ul {
+#wrapper .wrap .content-wrap .page-info .breadcrumb ul {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
 }
-#wrapper .wrap .content-wrap .breadcrumb ul li {
+#wrapper .wrap .content-wrap .page-info .breadcrumb ul li {
   position: relative;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
 }
-#wrapper .wrap .content-wrap .breadcrumb ul li a {
+#wrapper .wrap .content-wrap .page-info .breadcrumb ul li a {
   position: relative;
   font-size: 20px;
   color: #4D4D4D;
   font-weight: 500;
 }
-#wrapper .wrap .content-wrap .breadcrumb ul li a.home {
+#wrapper .wrap .content-wrap .page-info .breadcrumb ul li a.home {
   width: 22px;
   height: 22px;
   text-indent: -9999px;
   background: url(../../assets/images/icon_home.png) no-repeat center/contain;
 }
-#wrapper .wrap .content-wrap .breadcrumb ul li:not(:last-child)::after {
+#wrapper .wrap .content-wrap .page-info .breadcrumb ul li:not(:last-child)::after {
   position: relative;
   display: inline-block;
   content: "";
@@ -284,9 +290,13 @@ header {
   height: 22px;
   background: url(../../assets/images/icon_arrow.png) no-repeat center/contain;
 }
-#wrapper .wrap .content-wrap .breadcrumb ul li:last-child a {
+#wrapper .wrap .content-wrap .page-info .breadcrumb ul li:last-child a {
   color: #005199;
   font-weight: 700;
+}
+#wrapper .wrap .content-wrap .page-info .screen-num {
+  padding-bottom: 16px;
+  font-size: 20px;
 }
 #wrapper .wrap .content-wrap .content {
   width: 100%;
